@@ -55,3 +55,5 @@ class ManagerPlayers extends ModelPlayer
     }
   }
 }
+
+$manager = new ManagerPlayers;

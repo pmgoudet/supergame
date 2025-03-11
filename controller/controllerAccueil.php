@@ -2,6 +2,7 @@
 
 include "../utils/utils.php";
 include "../model/model_joueurs.php";
+include "../model/model_managerPlayers.php";
 include "../view/view_accueil.php";
 include "../view/header.php";
 include "../view/footer.php";
@@ -81,7 +82,7 @@ class ControllerHome
         && isset($_POST['password']) && !empty($_POST['password'])
       ) {
         //validation adresse mail
-        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+        if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) { //! aqui faltou o filtro do score
           $pseudo = sanitize($_POST['pseudo']);
           $email = sanitize($_POST['email']);
           $score = sanitize($_POST['score']);
